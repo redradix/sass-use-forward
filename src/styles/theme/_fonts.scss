@@ -1,0 +1,120 @@
+@use "../libs/mq";
+
+$font-heading: "Aeonik-Medium";
+$font-base: "Aeonik-Regular";
+
+@font-face {
+  font-family: $font-heading;
+  src: local($font-heading),
+    url("../assets/fonts/#{$font-heading}.woff2") format("woff2"),
+    url("../assets/fonts/#{$font-heading}.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-base;
+  src: local($font-base),
+    url("../assets/fonts/#{$font-base}.woff2") format("woff2"),
+    url("../assets/fonts/#{$font-base}.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+%heading-1 {
+  --factor: 0.5;
+  font-family: $font-heading;
+  font-size: calc(5rem * var(--factor));
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+  @include mq.mq($from: tablet) {
+    --factor: 0.875;
+  }
+  @include mq.mq($from: desktop) {
+    --factor: 1;
+  }
+}
+
+%heading-2 {
+  --factor: 0.625;
+  font-family: $font-heading;
+  font-size: calc(3.375rem * var(--factor));
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+
+  @include mq.mq($from: tablet) {
+    --factor: 0.75;
+  }
+  @include mq.mq($from: desktop) {
+    --factor: 1;
+  }
+}
+
+%heading-3 {
+  --factor: 0.625;
+  font-family: $font-heading;
+  font-size: calc(2.25rem * var(--factor));
+  font-weight: normal;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+
+  @include mq.mq($from: tablet) {
+    --factor: 0.875;
+  }
+  @include mq.mq($from: desktop) {
+    --factor: 1;
+  }
+}
+
+%heading-4 {
+  --factor: 0.875;
+  font-family: $font-heading;
+  font-size: calc(1.5rem * var(--factor));
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+
+  @include mq.mq($from: tablet) {
+    --factor: 1;
+  }
+}
+
+%heading-5 {
+  --factor: 0.875;
+  font-family: $font-heading;
+  font-size: calc(1.25rem * var(--factor));
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+
+  @include mq.mq($from: tablet) {
+    --factor: 1;
+  }
+}
+
+%heading-6 {
+  font-family: $font-heading;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+%body {
+  font-family: $font-base;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.57;
+}
+
+%subtitle {
+  font-family: $font-base;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.57;
+}

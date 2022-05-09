@@ -1,0 +1,16 @@
+// REVIEW: configuring libraries
+$custom-breakpoints: (
+  mobile: 375px,
+  tablet-small: 640px,
+  tablet: 780px,
+  tablet-large: 920px,
+  desktop: 1180px,
+  wide: 1400px,
+);
+
+// $custom-show-breakpoints: (mobile, tablet, desktop, wide);
+
+@forward "../node_modules/sass-mq/mq" with (
+    $breakpoints: $custom-breakpoints,
+    // $show-breakpoints: $custom-show-breakpoints
+  );
